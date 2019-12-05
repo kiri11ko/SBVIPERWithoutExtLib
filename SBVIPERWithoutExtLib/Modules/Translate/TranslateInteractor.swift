@@ -8,7 +8,6 @@
 import UIKit
 
 class TranslateInteractor: TranslateInteractorProtocol {
-    
     weak var presenter: TranslatePresenterProtocol?
     let network = NetworkService()
     let alert = AlertsService()
@@ -22,7 +21,10 @@ class TranslateInteractor: TranslateInteractorProtocol {
             }
             let jsonDecoder = JSONDecoder()
             do {
-            let responseModel = try jsonDecoder.decode(TranslateEntity.self, from: data!)
+                var responseModel = try jsonDecoder.decode(TranslateEntity.self, from: data!)
+                endpoint.queryItems?.forEach {
+                    $0.name == "text" ? responseModel.source = $0.value : nil
+                }
                 self?.coredata.saveContext(model: responseModel)
                 self?.presenter?.translateresult(wordTranslate: responseModel.text?.first ?? "")
             } catch let error {

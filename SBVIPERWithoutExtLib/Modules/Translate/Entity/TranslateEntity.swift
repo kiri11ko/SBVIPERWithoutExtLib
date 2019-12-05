@@ -5,13 +5,14 @@
 //  Created by Кирилл Лукьянов on 19.11.2019.
 //  Copyright (c) 2019 Кирилл Лукьянов. All rights reserved.
 
+
 import Foundation
 
 struct TranslateEntity: Codable {
 	let code: Int?
 	let lang: String?
 	let text: [String]?
-
+    var source: String?
 	enum CodingKeys: String, CodingKey {
 
 		case code
@@ -26,8 +27,4 @@ struct TranslateEntity: Codable {
 		text = try values.decodeIfPresent([String].self, forKey: .text)
 	}
 
-}
-
-extension CodingUserInfoKey {
-   static let context = CodingUserInfoKey(rawValue: "context")
 }

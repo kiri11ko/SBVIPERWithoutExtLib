@@ -14,11 +14,12 @@ extension Translate {
     @NSManaged public var code: Int16
     @NSManaged public var lang: String?
     @NSManaged public var text: String?
-    
+    @NSManaged public var source: String?
     convenience init(model: TranslateEntity, context: NSManagedObjectContext) {
         self.init(context: context)
         self.lang = model.lang
         self.text = model.text?.first
+        self.source = model.source
     }
 
 }

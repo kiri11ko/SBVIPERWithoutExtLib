@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 enum PresentType {
     case root
     case push
@@ -27,7 +26,6 @@ extension UIViewController {
         guard let currentModule = module.module else { fatalError() }
         return currentModule
     }
-    
     func navigate(type: PresentType = .push,
                   module: IRouter,
                   completion: ((_ module: UIViewController) -> Void)? = nil) {
@@ -155,7 +153,6 @@ extension UIViewController {
         return controller
     }
 }
-
 
 extension UIApplication {
     class func topViewController(_ base: UIViewController? = UIApplication.shared.connectedScenes.filter({$0.activationState == .foregroundActive})
@@ -295,8 +292,6 @@ public extension UIWindow {
         }
     }
 }
-
-
 
 protocol IDataPickerDelegate: class {
     func didDataPicker<T>(_ data: T?)
