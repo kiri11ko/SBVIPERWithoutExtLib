@@ -11,5 +11,14 @@ import Foundation
 import CoreData
 
 extension Translate {
+    @NSManaged public var code: Int16
+    @NSManaged public var lang: String?
+    @NSManaged public var text: String?
+    
+    convenience init(model: TranslateEntity, context: NSManagedObjectContext) {
+        self.init(context: context)
+        self.lang = model.lang
+        self.text = model.text?.first
+    }
 
 }

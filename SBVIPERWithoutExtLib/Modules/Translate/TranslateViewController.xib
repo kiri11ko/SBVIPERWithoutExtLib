@@ -6,9 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TranslateViewController" customModule="VIPERSBCoreData" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TranslateViewController" customModule="SBVIPERWithoutExtLib" customModuleProvider="target">
             <connections>
                 <outlet property="sourceText" destination="T5w-YV-2Jo" id="mjn-pd-blE"/>
+                <outlet property="translationText" destination="5K4-66-JPv" id="03Y-Te-UCY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -59,12 +60,22 @@
                             </constraints>
                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
                         </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs1-am-PMc">
+                            <rect key="frame" x="0.0" y="166" width="355" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="tIn-3x-9vy"/>
+                            </constraints>
+                            <state key="normal" title="Translate"/>
+                            <connections>
+                                <action selector="translateAction:" destination="-1" eventType="touchUpInside" id="l5H-bn-Eg2"/>
+                            </connections>
+                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5K4-66-JPv">
-                            <rect key="frame" x="0.0" y="166" width="355" height="331"/>
+                            <rect key="frame" x="0.0" y="223" width="355" height="274"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -73,6 +84,7 @@
                         <constraint firstItem="T5w-YV-2Jo" firstAttribute="leading" secondItem="t8n-EW-kn6" secondAttribute="leading" id="Jdx-dg-ucU"/>
                         <constraint firstItem="5K4-66-JPv" firstAttribute="leading" secondItem="t8n-EW-kn6" secondAttribute="leading" id="LAo-4q-nb9"/>
                         <constraint firstAttribute="trailing" secondItem="5K4-66-JPv" secondAttribute="trailing" id="b24-Is-rAU"/>
+                        <constraint firstItem="gs1-am-PMc" firstAttribute="width" secondItem="T5w-YV-2Jo" secondAttribute="width" id="jrY-Kf-jRe"/>
                     </constraints>
                 </stackView>
             </subviews>

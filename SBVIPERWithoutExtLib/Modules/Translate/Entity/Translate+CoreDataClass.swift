@@ -17,24 +17,4 @@ public class Translate: NSManagedObject {
         return NSFetchRequest<Translate>(entityName: "Translate")
     }
 
-    @NSManaged public var code: Int16
-    @NSManaged public var lang: String?
-    @NSManaged public var text: String?
-
-//    required convenience public init(from decoder: Decoder) throws {
-//        guard let context = decoder.userInfo[CodingUserInfoKey.context!] as? NSManagedObjectContext else { fatalError() }
-//        guard let entity = NSEntityDescription.entity(forEntityName: "Translate", in: context) else { fatalError() }
-//
-//        self.init(entity: entity, insertInto: context)
-//
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-////        _ = container.decodeIfPresent(String.self, forKey: )
-//    }
-
-    convenience init(model: TranslateEntity, context: NSManagedObjectContext) {
-//        self.code = Int16(model.code)
-        self.init(context: context)
-        self.lang = model.lang
-        self.text = model.text?.first
-    }
 }

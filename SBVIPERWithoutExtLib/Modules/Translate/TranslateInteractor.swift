@@ -8,6 +8,7 @@
 import UIKit
 
 class TranslateInteractor: TranslateInteractorProtocol {
+    
     weak var presenter: TranslatePresenterProtocol?
     let network = NetworkService()
     let alert = AlertsService()
@@ -23,12 +24,15 @@ class TranslateInteractor: TranslateInteractorProtocol {
             do {
             let responseModel = try jsonDecoder.decode(TranslateEntity.self, from: data!)
                 self?.coredata.saveContext(model: responseModel)
-
+                self?.presenter?.translateresult(wordTranslate: responseModel.text?.first ?? "")
             } catch let error {
                     self?.alert.showAlert(title: .error, message: error.localizedDescription).show()
                 }
 
         }
+    }
+    func makeAlert(style: AlertsTitle, text: String) -> Any {
+        return alert.showAlert(title: style, message: text)
     }
 
 }

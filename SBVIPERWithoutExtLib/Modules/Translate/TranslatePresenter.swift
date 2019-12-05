@@ -25,12 +25,20 @@ class TranslatePresenter: TranslatePresenterProtocol {
     }
 
     func trasnalteWrod(word: String) {
-        let yandexEndpoint = YandexLanguageEndpoint.yandex(parameter: ["text": "hello"])
+        let yandexEndpoint = YandexLanguageEndpoint.yandex(parameter: ["text": word])
         interactor?.getTranslateData(endpoint: yandexEndpoint)
     }
 
     func changeLanguageModule() {
         router.showLanguageModule()
+    }
+    func showAlertTextCountError() {
+        let alert: Any = interactor?.makeAlert(style: .error,
+                                               text: "Error, input minimum 3 characters.") as Any
+        view?.showAlert(alert: alert)
+    }
+    func translateresult(wordTranslate: String) {
+        view?.translateresult(wordTranslate: wordTranslate)
     }
 
 }
