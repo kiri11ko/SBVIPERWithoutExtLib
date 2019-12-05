@@ -14,17 +14,17 @@ protocol HistoryWireframeProtocol: class {
 }
 // MARK: Presenter -
 protocol HistoryPresenterProtocol: class {
-
+    func getHistoryData()
 }
 
 // MARK: Interactor -
 protocol HistoryInteractorProtocol: class {
-
   var presenter: HistoryPresenterProtocol? { get set }
+    func getHistoryData()
 }
 
 // MARK: View -
 protocol HistoryViewProtocol: class {
-
   var presenter: HistoryPresenterProtocol? { get set }
+    func refreshHistoryData()
 }

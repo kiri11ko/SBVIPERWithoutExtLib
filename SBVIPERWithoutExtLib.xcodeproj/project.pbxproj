@@ -48,6 +48,7 @@
 		1F2ECC1323990A20002FD5BC /* TranslateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC0F23990A20002FD5BC /* TranslateEntity.swift */; };
 		1F2ECC1723990A80002FD5BC /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1523990A80002FD5BC /* AppRoute.swift */; };
 		1F2ECC1823990A80002FD5BC /* GeneralRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1623990A80002FD5BC /* GeneralRoute.swift */; };
+		1F2ECC1B23997CF9002FD5BC /* ServicesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		1F2ECC0F23990A20002FD5BC /* TranslateEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateEntity.swift; sourceTree = "<group>"; };
 		1F2ECC1523990A80002FD5BC /* AppRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		1F2ECC1623990A80002FD5BC /* GeneralRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRoute.swift; sourceTree = "<group>"; };
+		1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		1F2ECBD223990967002FD5BC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */,
 				1F2ECBCA2399095E002FD5BC /* AlertService.swift */,
 				1F2ECBCB2399095E002FD5BC /* CoreDataService.swift */,
 				1F2ECBCC2399095E002FD5BC /* NetworkService.swift */,
@@ -340,6 +343,7 @@
 				1F2ECBBC2399090B002FD5BC /* SBVIPERWithoutExtLib.xcdatamodeld in Sources */,
 				1F2ECC1123990A20002FD5BC /* TranslateModel.xcdatamodeld in Sources */,
 				1F2ECBEF239909F2002FD5BC /* MainTabBarRouter.swift in Sources */,
+				1F2ECC1B23997CF9002FD5BC /* ServicesProtocols.swift in Sources */,
 				1F2ECBE2239909E5002FD5BC /* HistoryViewController.swift in Sources */,
 				1F2ECC1223990A20002FD5BC /* Translate+CoreDataClass.swift in Sources */,
 				1F2ECBB22399090B002FD5BC /* AppDelegate.swift in Sources */,

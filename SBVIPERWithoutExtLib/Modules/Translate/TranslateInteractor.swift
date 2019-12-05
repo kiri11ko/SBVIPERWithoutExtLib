@@ -9,12 +9,11 @@ import UIKit
 
 class TranslateInteractor: TranslateInteractorProtocol {
     weak var presenter: TranslatePresenterProtocol?
-    let network = NetworkService()
+    var network: NetworkManager!
     let alert = AlertsService()
-    let coredata = CoreDataService()
+    var coredata: DataManager!
 
     func getTranslateData(endpoint: YandexLanguageEndpoint) {
-
         network.request(endpoint: endpoint) { [weak self] (data, error) in
             if  let error = error {
                 self?.alert.showAlert(title: .error, message: error.localizedDescription).show()

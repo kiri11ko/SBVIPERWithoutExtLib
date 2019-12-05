@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard (scene as? UIWindowScene) != nil else { return }
         self.window?.rootViewController? = UIViewController.initialModule(module: GeneralRoute.main)
-        self.window?.rootViewController?.navigate(type: .root, module: GeneralRoute.main)
+//        self.window?.rootViewController?.navigate(type: .root, module: GeneralRoute.main)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

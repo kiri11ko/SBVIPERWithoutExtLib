@@ -14,6 +14,10 @@ class HistoryViewController: UIViewController, HistoryViewProtocol {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.getHistoryData()
+    }
+    func refreshHistoryData() {
+        
     }
 
 }

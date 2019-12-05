@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class CoreDataService {
+class CoreDataService: DataManager {
 
     private lazy var persistentContainer: NSPersistentContainer = {
 
@@ -36,14 +36,15 @@ class CoreDataService {
         }
     }
 
-    func loadData() {
+    func loadData() -> [Translate] {
+        var result: [Translate] = []
         let context = persistentContainer.viewContext
         do {
-            _ = try context.fetch(Translate.fetchRequest()) as? [Translate]
+            result = try context.fetch(Translate.fetchRequest()) as? [Translate] ?? []
         } catch (let error) {
             print(error)
         }
-//        let translate = results.first!
+        return result
     }
 
 }

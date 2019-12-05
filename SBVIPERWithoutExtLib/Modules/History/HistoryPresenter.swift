@@ -20,4 +20,7 @@ class HistoryPresenter: HistoryPresenterProtocol {
         self.router = router
     }
 
+    func getHistoryData() {
+        interactor?.getHistoryData()
+    }
 }

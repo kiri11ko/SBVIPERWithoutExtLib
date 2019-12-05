@@ -7,14 +7,7 @@
 
 import Foundation
 
-protocol IEndpoint {
-    var scheme: String? { get }
-    var host: String {get}
-    var path: String {get}
-    var queryItems: [URLQueryItem]? { get }
-}
-
-class NetworkService {
+class NetworkService: NetworkManager {
 
     func request<T: IEndpoint>(endpoint: T, completion: @escaping (Data?, Error?) -> Void) {
         var urlConstructor = URLComponents()
