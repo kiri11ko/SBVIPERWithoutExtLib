@@ -31,4 +31,7 @@ class TranslateRouter: TranslateWireframeProtocol {
     func showLanguageModule() {
         viewController?.navigate(type: .select, module: GeneralRoute.sourceLanguage)
     }
+    func showAlert(title: AlertsTitle, message: String) {
+        viewController?.showAlert(title: .error, message: message)
+    }
 }

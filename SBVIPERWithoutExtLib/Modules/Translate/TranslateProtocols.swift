@@ -10,12 +10,13 @@ import Foundation
 // MARK: Wireframe -
 protocol TranslateWireframeProtocol: class {
     func showLanguageModule()
+    func showAlert(title: AlertsTitle, message: String)
 }
 // MARK: Presenter -
 protocol TranslatePresenterProtocol: class {
     func changeLanguageModule()
     func trasnalteWrod(word: String)
-    func showAlertTextCountError()
+    func showAlert(title: AlertsTitle, message: String)
     func translateresult(wordTranslate: String)
 
 }
@@ -27,7 +28,6 @@ protocol TranslateInteractorProtocol: class {
     var coredata: DataManager! {get set}
     var network: NetworkManager! { get set}
     func getTranslateData(endpoint: YandexLanguageEndpoint)
-    func makeAlert(style: AlertsTitle, text: String) -> Any
 }
 
 // MARK: View -

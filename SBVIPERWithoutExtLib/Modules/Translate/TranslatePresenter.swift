@@ -31,10 +31,8 @@ class TranslatePresenter: TranslatePresenterProtocol {
     func changeLanguageModule() {
         router.showLanguageModule()
     }
-    func showAlertTextCountError() {
-        let alert: Any = interactor?.makeAlert(style: .error,
-                                               text: "Error, input minimum 3 characters.") as Any
-        view?.showAlert(alert: alert)
+    func showAlert(title: AlertsTitle, message: String) {
+        router.showAlert(title: title, message: message)
     }
     func translateresult(wordTranslate: String) {
         view?.translateresult(wordTranslate: wordTranslate)

@@ -29,7 +29,7 @@ class TranslateViewController: UIViewController {
         if sourceText.text.count > 3 {
             presenter?.trasnalteWrod(word: sourceText.text)
         } else {
-            presenter?.showAlertTextCountError()
+            presenter?.showAlert(title: .error, message: "Error, input minimum 3 characters.")
         }
     }
 

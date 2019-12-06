@@ -15,6 +15,7 @@ enum PresentType {
     case presentWithNavigation
     case modal
     case modalWithNavigation
+
 }
 
 protocol IRouter {
@@ -48,7 +49,7 @@ extension UIViewController {
             }
             if currentModule is UITabBarController {
                 UIApplication.shared.delegate?.window??.setRootViewController(currentModule, options: .init(direction: .fade,
-                                                                                                    style: .easeInOut))
+                                                                                                            style: .easeInOut))
             } else {
                 UIApplication.shared.delegate?.window??.setRootViewController(
                     UINavigationController(rootViewController: currentModule),
@@ -91,6 +92,12 @@ extension UIViewController {
                 completion?(currentModule)
             })
         }
+    }
+    func showAlert(title: AlertsTitle, message: String,  _ completion: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: title.rawValue, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: completion)
     }
     func dismiss(toVc: IRouter? = nil, _ completion: (() -> Void)? = nil) {
         if self.navigationController != nil {
@@ -204,7 +211,7 @@ public extension UIWindow {
                 return CAMediaTimingFunction(name: CAMediaTimingFunctionName(rawValue: key!))
             }
         }
-
+        
         public enum Direction {
             case fade
             case toTop
@@ -267,7 +274,7 @@ public extension UIWindow {
             return transition
         }
     }
-
+    
     func setRootViewController(_ controller: UIViewController, options: TransitionOptions = TransitionOptions()) {
         var transitionWnd: UIWindow?
         if let background = options.background {

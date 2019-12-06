@@ -13,7 +13,7 @@
 		1F2ECBBC2399090B002FD5BC /* SBVIPERWithoutExtLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECBBA2399090B002FD5BC /* SBVIPERWithoutExtLib.xcdatamodeld */; };
 		1F2ECBBE2399090C002FD5BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F2ECBBD2399090C002FD5BC /* Assets.xcassets */; };
 		1F2ECBC12399090C002FD5BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2ECBBF2399090C002FD5BC /* LaunchScreen.storyboard */; };
-		1F2ECBCE2399095E002FD5BC /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECBCA2399095E002FD5BC /* AlertService.swift */; };
+		1F2ECBCE2399095E002FD5BC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECBCA2399095E002FD5BC /* Helpers.swift */; };
 		1F2ECBCF2399095E002FD5BC /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECBCB2399095E002FD5BC /* CoreDataService.swift */; };
 		1F2ECBD02399095E002FD5BC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECBCC2399095E002FD5BC /* NetworkService.swift */; };
 		1F2ECBD12399095E002FD5BC /* YandexLanguageEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECBCD2399095E002FD5BC /* YandexLanguageEndpoint.swift */; };
@@ -60,7 +60,7 @@
 		1F2ECBBD2399090C002FD5BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F2ECBC02399090C002FD5BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F2ECBC22399090C002FD5BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F2ECBCA2399095E002FD5BC /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		1F2ECBCA2399095E002FD5BC /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		1F2ECBCB2399095E002FD5BC /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		1F2ECBCC2399095E002FD5BC /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		1F2ECBCD2399095E002FD5BC /* YandexLanguageEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YandexLanguageEndpoint.swift; sourceTree = "<group>"; };
@@ -144,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */,
-				1F2ECBCA2399095E002FD5BC /* AlertService.swift */,
 				1F2ECBCB2399095E002FD5BC /* CoreDataService.swift */,
 				1F2ECBCC2399095E002FD5BC /* NetworkService.swift */,
 				1F2ECBCD2399095E002FD5BC /* YandexLanguageEndpoint.swift */,
@@ -235,6 +234,7 @@
 				1F2ECC1623990A80002FD5BC /* GeneralRoute.swift */,
 				1F2ECBB32399090B002FD5BC /* SceneDelegate.swift */,
 				1F2ECBB12399090B002FD5BC /* AppDelegate.swift */,
+				1F2ECBCA2399095E002FD5BC /* Helpers.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -357,7 +357,7 @@
 				1F2ECBEE239909F2002FD5BC /* MainTabBarProtocols.swift in Sources */,
 				1F2ECBDE239909E5002FD5BC /* HistoryInteractor.swift in Sources */,
 				1F2ECBF7239909FF002FD5BC /* SourceLanguageRouter.swift in Sources */,
-				1F2ECBCE2399095E002FD5BC /* AlertService.swift in Sources */,
+				1F2ECBCE2399095E002FD5BC /* Helpers.swift in Sources */,
 				1F2ECC1723990A80002FD5BC /* AppRoute.swift in Sources */,
 				1F2ECC0423990A0D002FD5BC /* TranslateRouter.swift in Sources */,
 				1F2ECC1323990A20002FD5BC /* TranslateEntity.swift in Sources */,
