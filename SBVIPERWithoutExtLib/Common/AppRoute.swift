@@ -33,20 +33,6 @@ extension UIViewController {
         guard let currentModule = module.module else { fatalError() }
         switch type {
         case .root:
-            if #available(iOS 13.0, *) {
-                for scene in UIApplication.shared.connectedScenes {
-                    if scene.activationState == .foregroundActive {
-                        _ = ((scene as? UIWindowScene)!.delegate as? UIWindowSceneDelegate)?.window??.setRootViewController(
-                            UINavigationController(rootViewController: currentModule),
-                            options: .init(
-                                direction: .fade,
-                                style: .easeInOut
-                            )
-                        )
-                        break
-                    }
-                }
-            }
             if currentModule is UITabBarController {
                 UIApplication.shared.delegate?.window??.setRootViewController(currentModule, options: .init(direction: .fade,
                                                                                                             style: .easeInOut))
