@@ -10,8 +10,4 @@ import UIKit
 
 class HistoryInteractor: HistoryInteractorProtocol {
     weak var presenter: HistoryPresenterProtocol?
-    let coreData = CoreDataService()
-    func getHistoryData() {
-        print(coreData.loadData())
-    }
 }

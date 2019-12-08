@@ -79,7 +79,7 @@ extension UIViewController {
             })
         }
     }
-    func showAlert(title: AlertsTitle, message: String,  _ completion: (() -> Void)? = nil) {
+    func showAlert(title: AlertsTitle, message: String, _ completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title.rawValue, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "ok", style: .default, handler: nil)
         alert.addAction(action)
@@ -197,7 +197,6 @@ public extension UIWindow {
                 return CAMediaTimingFunction(name: CAMediaTimingFunctionName(rawValue: key!))
             }
         }
-        
         public enum Direction {
             case fade
             case toTop
@@ -260,7 +259,6 @@ public extension UIWindow {
             return transition
         }
     }
-    
     func setRootViewController(_ controller: UIViewController, options: TransitionOptions = TransitionOptions()) {
         var transitionWnd: UIWindow?
         if let background = options.background {

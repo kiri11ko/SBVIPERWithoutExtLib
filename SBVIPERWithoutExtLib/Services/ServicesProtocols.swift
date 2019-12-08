@@ -10,7 +10,7 @@ import Foundation
 
 protocol DataManager: class {
     func saveContext (model: TranslateEntity)
-    func loadData() -> [Translate]
+//    func loadData() -> [Translate]
 }
 
 protocol IEndpoint {

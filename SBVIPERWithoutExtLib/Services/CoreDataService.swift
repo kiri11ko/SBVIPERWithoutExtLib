@@ -10,41 +10,84 @@ import Foundation
 import CoreData
 
 class CoreDataService: DataManager {
-
-    private lazy var persistentContainer: NSPersistentContainer = {
-
-        let container = NSPersistentContainer(name: "TranslateModel")
-        container.loadPersistentStores(completionHandler: { (_, error) in
-            if let error = error as NSError? {
-
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
+    lazy var mainContext: NSManagedObjectContext = {
+        var managedObjectContext: NSManagedObjectContext
+        managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        let modelURL = Bundle.main.url(forResource: "TranslateModel", withExtension: "momd")
+        let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL!)
+        let persistentCoordinator = NSPersistentStoreCoordinator(managedObjectModel:
+                                                managedObjectModel!)
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,
+                                                .userDomainMask, true)[0]
+        let storeURL = URL(fileURLWithPath: documentsPath.appending("/TranslateModel.sqlite"))
+        do {
+            try persistentCoordinator.addPersistentStore(ofType: NSSQLiteStoreType,
+                                                 configurationName: nil,
+                                                 at: storeURL,
+                                                 options: [NSSQLitePragmasOption:
+                                                              ["journal_mode": "MEMORY"]])
+        } catch {
+            abort()
+        }
+        managedObjectContext.persistentStoreCoordinator = persistentCoordinator
+        return managedObjectContext
+    }()
+    lazy var backgroundContext: NSManagedObjectContext = {
+        return NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
     }()
 
     func saveContext (model: TranslateEntity) {
-        let context = persistentContainer.viewContext
-        _ = Translate(model: model, context: context)
-        if context.hasChanges {
+        _ = Translate(model: model, context: mainContext)
+        if mainContext.hasChanges {
             do {
-                try context.save()
+                try mainContext.save()
             } catch {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
+//
+//    func loadData() -> [Translate] {
+//        var result: [Translate] = []
+//        do {
+//            result = try mainContext.fetch(Translate.fetchRequest()) as? [Translate] ?? []
+//        } catch let error {
+//            print(error)
+//        }
+//        return result
+//    }
+    //    private lazy var persistentContainer: NSPersistentContainer = {
+    //
+    //        let container = NSPersistentContainer(name: "TranslateModel")
+    //        container.loadPersistentStores(completionHandler: { (_, error) in
+    //            if let error = error as NSError? {
+    //
+    //                fatalError("Unresolved error \(error), \(error.userInfo)")
+    //            }
+    //        })
+    //        return container
+    //    }()
 
-    func loadData() -> [Translate] {
-        var result: [Translate] = []
-        let context = persistentContainer.viewContext
-        do {
-            result = try context.fetch(Translate.fetchRequest()) as? [Translate] ?? []
-        } catch (let error) {
-            print(error)
-        }
-        return result
-    }
-
+    //    private lazy var persistentCoordinator: NSPersistentStoreCoordinator = {
+    //
+    //        let modelURL = Bundle.main.url(forResource: "Test", withExtension: "momd")
+    //        let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL!)
+    //        let persistentCoordinator = NSPersistentStoreCoordinator(managedObjectModel:
+    //                                                managedObjectModel!)
+    //        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,
+    //                                                .userDomainMask, true)[0]
+    //        let storeURL = URL(fileURLWithPath: documentsPath.appending("/Test.sqlite"))
+    //        print("storeUrl = \(String(describing: storeURL))")
+    //        do {
+    //            try persistentCoordinator.addPersistentStore(ofType: NSSQLiteStoreType,
+    //                                                 configurationName: nil,
+    //                                                 at: storeURL,
+    //                                                 options: [NSSQLitePragmasOption:
+    //                                                              ["journal_mode":"MEMORY"]])
+    //            return persistentCoordinator
+    //        } catch {
+    //            abort()
+    //        }
+    //    } ()
 }

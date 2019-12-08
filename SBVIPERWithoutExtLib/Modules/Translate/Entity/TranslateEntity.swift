@@ -5,7 +5,6 @@
 //  Created by Кирилл Лукьянов on 19.11.2019.
 //  Copyright (c) 2019 Кирилл Лукьянов. All rights reserved.
 
-
 import Foundation
 
 struct TranslateEntity: Codable {

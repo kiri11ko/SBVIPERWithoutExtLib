@@ -48,6 +48,8 @@
 		1F2ECC1723990A80002FD5BC /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1523990A80002FD5BC /* AppRoute.swift */; };
 		1F2ECC1823990A80002FD5BC /* GeneralRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1623990A80002FD5BC /* GeneralRoute.swift */; };
 		1F2ECC1B23997CF9002FD5BC /* ServicesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */; };
+		1FF51893239D487500E661BA /* Language+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF51891239D487500E661BA /* Language+CoreDataClass.swift */; };
+		1FF51894239D487500E661BA /* Language+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF51892239D487500E661BA /* Language+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		1F2ECC1523990A80002FD5BC /* AppRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		1F2ECC1623990A80002FD5BC /* GeneralRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRoute.swift; sourceTree = "<group>"; };
 		1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProtocols.swift; sourceTree = "<group>"; };
+		1FF51891239D487500E661BA /* Language+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1FF51892239D487500E661BA /* Language+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 		1F2ECBD7239909D8002FD5BC /* SourceLanguage */ = {
 			isa = PBXGroup;
 			children = (
+				1FF51890239D484A00E661BA /* Entity */,
 				1F2ECBF4239909FF002FD5BC /* SourceLanguageInteractor.swift */,
 				1F2ECBF3239909FF002FD5BC /* SourceLanguagePresenter.swift */,
 				1F2ECBF2239909FF002FD5BC /* SourceLanguageProtocols.swift */,
@@ -234,6 +239,15 @@
 				1F2ECBCA2399095E002FD5BC /* Helpers.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		1FF51890239D484A00E661BA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1FF51891239D487500E661BA /* Language+CoreDataClass.swift */,
+				1FF51892239D487500E661BA /* Language+CoreDataProperties.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,11 +356,13 @@
 				1F2ECC1B23997CF9002FD5BC /* ServicesProtocols.swift in Sources */,
 				1F2ECBE2239909E5002FD5BC /* HistoryViewController.swift in Sources */,
 				1F2ECC1223990A20002FD5BC /* Translate+CoreDataClass.swift in Sources */,
+				1FF51893239D487500E661BA /* Language+CoreDataClass.swift in Sources */,
 				1F2ECBB22399090B002FD5BC /* AppDelegate.swift in Sources */,
 				1F2ECC1023990A20002FD5BC /* Translate+CoreDataProperties.swift in Sources */,
 				1F2ECBB42399090B002FD5BC /* SceneDelegate.swift in Sources */,
 				1F2ECBCF2399095E002FD5BC /* CoreDataService.swift in Sources */,
 				1F2ECC0723990A0D002FD5BC /* TranslateProtocols.swift in Sources */,
+				1FF51894239D487500E661BA /* Language+CoreDataProperties.swift in Sources */,
 				1F2ECBD12399095E002FD5BC /* YandexLanguageEndpoint.swift in Sources */,
 				1F2ECBFB239909FF002FD5BC /* SourceLanguageInteractor.swift in Sources */,
 				1F2ECBE3239909E5002FD5BC /* HistoryProtocols.swift in Sources */,
