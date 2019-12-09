@@ -6,8 +6,40 @@
 //  Copyright © 2019 Кирилл Лукьянов. All rights reserved.
 
 
-import UIKit
+import CoreData
 
 class HistoryInteractor: HistoryInteractorProtocol {
+    func numberOfSection() -> Int {
+        return fetchedResultsController.sections?.count ?? 0
+    }
+    func numberOfRowsInSection(section: Int) -> Int {
+        guard let sections = fetchedResultsController.sections else {
+            fatalError("No sections in fetchedResultsController")
+        }
+        let sectionInfo = sections[section]
+        return sectionInfo.numberOfObjects
+    }
+    func getObjects(index: IndexPath) -> AnyObject {
+        guard let object = self.fetchedResultsController?.object(at: index) else {
+            fatalError("Attempt to configure cell without a managed object")
+        }
+        return object
+    }
     weak var presenter: HistoryPresenterProtocol?
+    var fetchedResultsController: NSFetchedResultsController<Translate>!
+    func initializeFetchedResultsController() {
+        let request: NSFetchRequest<Translate> = Translate.fetchRequest()
+        let text = NSSortDescriptor(key: #keyPath(Translate.text), ascending: true)
+        request.sortDescriptors = [text]
+        let dataController = CoreDataService()
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: dataController.mainContext,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: nil)
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalError("Failed to initialize FetchedResultsController: \(error)")
+        }
+    }
 }

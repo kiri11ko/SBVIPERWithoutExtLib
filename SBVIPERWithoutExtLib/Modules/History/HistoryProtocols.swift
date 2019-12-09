@@ -14,17 +14,22 @@ protocol HistoryWireframeProtocol: class {
 }
 // MARK: Presenter -
 protocol HistoryPresenterProtocol: class {
-    func getHistoryData()
+    func initializeFetchedResultsController()
+    func numberOfSection() -> Int
+    func numberOfRowsInSection(section: Int) -> Int
+    func getObjects(index: IndexPath) -> AnyObject
 }
 
 // MARK: Interactor -
 protocol HistoryInteractorProtocol: class {
   var presenter: HistoryPresenterProtocol? { get set }
-    func getHistoryData()
+    func initializeFetchedResultsController()
+    func getObjects(index: IndexPath) -> AnyObject
+    func numberOfSection() -> Int
+    func numberOfRowsInSection(section: Int) -> Int
 }
 
 // MARK: View -
 protocol HistoryViewProtocol: class {
   var presenter: HistoryPresenterProtocol? { get set }
-    func refreshHistoryData()
 }
