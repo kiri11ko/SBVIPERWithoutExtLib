@@ -9,6 +9,7 @@
 import CoreData
 
 class HistoryInteractor: HistoryInteractorProtocol {
+    var coredata: DataManager!
     func numberOfSection() -> Int {
         return fetchedResultsController.sections?.count ?? 0
     }
@@ -31,9 +32,8 @@ class HistoryInteractor: HistoryInteractorProtocol {
         let request: NSFetchRequest<Translate> = Translate.fetchRequest()
         let text = NSSortDescriptor(key: #keyPath(Translate.text), ascending: true)
         request.sortDescriptors = [text]
-        let dataController = CoreDataService()
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
-                                                              managedObjectContext: dataController.mainContext,
+                                                              managedObjectContext: coredata.mainContext,
                                                               sectionNameKeyPath: nil,
                                                               cacheName: nil)
         do {

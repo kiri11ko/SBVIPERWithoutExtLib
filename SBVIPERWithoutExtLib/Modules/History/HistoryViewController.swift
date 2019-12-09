@@ -6,7 +6,6 @@
 //  Copyright © 2019 Кирилл Лукьянов. All rights reserved.
 
 import UIKit
-import CoreData
 
 class HistoryViewController: UIViewController, HistoryViewProtocol {
     @IBOutlet weak var tableView: UITableView!

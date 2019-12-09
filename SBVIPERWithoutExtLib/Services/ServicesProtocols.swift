@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import CoreData
 
 protocol DataManager: class {
     func saveContext (model: TranslateEntity)
-//    func loadData() -> [Translate]
+    var mainContext: NSManagedObjectContext {get}
 }
 
 protocol IEndpoint {

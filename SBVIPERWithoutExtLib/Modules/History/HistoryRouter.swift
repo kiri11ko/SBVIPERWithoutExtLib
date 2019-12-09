@@ -18,7 +18,9 @@ class HistoryRouter: HistoryWireframeProtocol {
         let interactor = HistoryInteractor()
         let router = HistoryRouter()
         let presenter = HistoryPresenter(interface: view, interactor: interactor, router: router)
-
+        let coreData = CoreDataService()
+        
+        interactor.coredata = coreData
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
