@@ -48,9 +48,21 @@
 		1F2ECC1723990A80002FD5BC /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1523990A80002FD5BC /* AppRoute.swift */; };
 		1F2ECC1823990A80002FD5BC /* GeneralRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1623990A80002FD5BC /* GeneralRoute.swift */; };
 		1F2ECC1B23997CF9002FD5BC /* ServicesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */; };
+		1F96849623A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96849523A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.swift */; };
+		1F96849E23A50DC800DE4F6F /* NetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96849D23A50DC800DE4F6F /* NetworkServiceTest.swift */; };
 		1FF51893239D487500E661BA /* Language+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF51891239D487500E661BA /* Language+CoreDataClass.swift */; };
 		1FF51894239D487500E661BA /* Language+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF51892239D487500E661BA /* Language+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F96849823A4F2A600DE4F6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F2ECBA62399090B002FD5BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F2ECBAD2399090B002FD5BC;
+			remoteInfo = SBVIPERWithoutExtLib;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1F2ECBAE2399090B002FD5BC /* SBVIPERWithoutExtLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBVIPERWithoutExtLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,12 +108,23 @@
 		1F2ECC1523990A80002FD5BC /* AppRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		1F2ECC1623990A80002FD5BC /* GeneralRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRoute.swift; sourceTree = "<group>"; };
 		1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProtocols.swift; sourceTree = "<group>"; };
+		1F96849323A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBVIPERWithoutExtLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F96849523A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBVIPERWithoutExtLibTests.swift; sourceTree = "<group>"; };
+		1F96849723A4F2A600DE4F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F96849D23A50DC800DE4F6F /* NetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTest.swift; sourceTree = "<group>"; };
 		1FF51891239D487500E661BA /* Language+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1FF51892239D487500E661BA /* Language+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1F2ECBAB2399090B002FD5BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F96849023A4F2A600DE4F6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				1F2ECBB02399090B002FD5BC /* SBVIPERWithoutExtLib */,
+				1F96849423A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests */,
 				1F2ECBAF2399090B002FD5BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				1F2ECBAE2399090B002FD5BC /* SBVIPERWithoutExtLib.app */,
+				1F96849323A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +266,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		1F96849423A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F96849D23A50DC800DE4F6F /* NetworkServiceTest.swift */,
+				1F96849523A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.swift */,
+				1F96849723A4F2A600DE4F6F /* Info.plist */,
+			);
+			path = SBVIPERWithoutExtLibTests;
+			sourceTree = "<group>";
+		};
 		1FF51890239D484A00E661BA /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,18 +306,40 @@
 			productReference = 1F2ECBAE2399090B002FD5BC /* SBVIPERWithoutExtLib.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1F96849223A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F96849C23A4F2A600DE4F6F /* Build configuration list for PBXNativeTarget "SBVIPERWithoutExtLibTests" */;
+			buildPhases = (
+				1F96848F23A4F2A600DE4F6F /* Sources */,
+				1F96849023A4F2A600DE4F6F /* Frameworks */,
+				1F96849123A4F2A600DE4F6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F96849923A4F2A600DE4F6F /* PBXTargetDependency */,
+			);
+			name = SBVIPERWithoutExtLibTests;
+			productName = SBVIPERWithoutExtLibTests;
+			productReference = 1F96849323A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1F2ECBA62399090B002FD5BC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Кирилл Лукьянов";
 				TargetAttributes = {
 					1F2ECBAD2399090B002FD5BC = {
 						CreatedOnToolsVersion = 11.2.1;
+					};
+					1F96849223A4F2A600DE4F6F = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 1F2ECBAD2399090B002FD5BC;
 					};
 				};
 			};
@@ -300,6 +357,7 @@
 			projectRoot = "";
 			targets = (
 				1F2ECBAD2399090B002FD5BC /* SBVIPERWithoutExtLib */,
+				1F96849223A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests */,
 			);
 		};
 /* End PBXProject section */
@@ -315,6 +373,13 @@
 				1F2ECC0623990A0D002FD5BC /* TranslateViewController.xib in Resources */,
 				1F2ECBFD239909FF002FD5BC /* SourceLanguageViewController.xib in Resources */,
 				1F2ECBE0239909E5002FD5BC /* HistoryViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F96849123A4F2A600DE4F6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +450,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F96848F23A4F2A600DE4F6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F96849E23A50DC800DE4F6F /* NetworkServiceTest.swift in Sources */,
+				1F96849623A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F96849923A4F2A600DE4F6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F2ECBAD2399090B002FD5BC /* SBVIPERWithoutExtLib */;
+			targetProxy = 1F96849823A4F2A600DE4F6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1F2ECBBF2399090C002FD5BC /* LaunchScreen.storyboard */ = {
@@ -549,6 +631,46 @@
 			};
 			name = Release;
 		};
+		1F96849A23A4F2A600DE4F6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 257R75DVT3;
+				INFOPLIST_FILE = SBVIPERWithoutExtLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kirillko.net.SBVIPERWithoutExtLibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBVIPERWithoutExtLib.app/SBVIPERWithoutExtLib";
+			};
+			name = Debug;
+		};
+		1F96849B23A4F2A600DE4F6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 257R75DVT3;
+				INFOPLIST_FILE = SBVIPERWithoutExtLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kirillko.net.SBVIPERWithoutExtLibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBVIPERWithoutExtLib.app/SBVIPERWithoutExtLib";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -566,6 +688,15 @@
 			buildConfigurations = (
 				1F2ECBC62399090C002FD5BC /* Debug */,
 				1F2ECBC72399090C002FD5BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F96849C23A4F2A600DE4F6F /* Build configuration list for PBXNativeTarget "SBVIPERWithoutExtLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F96849A23A4F2A600DE4F6F /* Debug */,
+				1F96849B23A4F2A600DE4F6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

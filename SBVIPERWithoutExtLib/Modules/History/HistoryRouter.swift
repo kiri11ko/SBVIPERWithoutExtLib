@@ -5,7 +5,6 @@
 //  Created Кирилл Лукьянов on 17.11.2019.
 //  Copyright © 2019 Кирилл Лукьянов. All rights reserved.
 
-
 import UIKit
 
 class HistoryRouter: HistoryWireframeProtocol {
@@ -19,7 +18,6 @@ class HistoryRouter: HistoryWireframeProtocol {
         let router = HistoryRouter()
         let presenter = HistoryPresenter(interface: view, interactor: interactor, router: router)
         let coreData = CoreDataService()
-        
         interactor.coredata = coreData
         view.presenter = presenter
         interactor.presenter = presenter

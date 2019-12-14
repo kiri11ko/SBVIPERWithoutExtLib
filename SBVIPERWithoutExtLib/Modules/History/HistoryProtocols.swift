@@ -14,6 +14,7 @@ protocol HistoryWireframeProtocol: class {
 }
 // MARK: Presenter -
 protocol HistoryPresenterProtocol: class {
+    var interactor: HistoryInteractorProtocol? { get set }
     func initializeFetchedResultsController()
     func numberOfSection() -> Int
     func numberOfRowsInSection(section: Int) -> Int

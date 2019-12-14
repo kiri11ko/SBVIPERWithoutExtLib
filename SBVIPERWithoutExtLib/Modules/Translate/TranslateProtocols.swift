@@ -18,7 +18,7 @@ protocol TranslatePresenterProtocol: class {
     func trasnalteWrod(word: String)
     func showAlert(title: AlertsTitle, message: String)
     func translateresult(wordTranslate: String)
-
+    var interactor: TranslateInteractorProtocol? { get set}
 }
 
 // MARK: Interactor -

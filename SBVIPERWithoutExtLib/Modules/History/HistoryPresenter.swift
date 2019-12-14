@@ -9,7 +9,7 @@
 import UIKit
 
 class HistoryPresenter: HistoryPresenterProtocol {
-    func getObjects(index: IndexPath) -> AnyObject {
+    final func getObjects(index: IndexPath) -> AnyObject {
         return (interactor?.getObjects(index: index))!
     }
     func numberOfSection() -> Int {
