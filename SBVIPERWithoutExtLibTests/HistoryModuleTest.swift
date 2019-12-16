@@ -9,7 +9,7 @@
 import XCTest
 @testable import SBVIPERWithoutExtLib
 class HistoryModuleTest: XCTestCase {
-    var historyView: HistoryViewController? = nil
+    var historyView: HistoryViewController?
     override func setUp() {
         historyView = HistoryRouter.createModule() as? HistoryViewController
         // Put setup code here. This method is called before the invocation of each test method in the class.

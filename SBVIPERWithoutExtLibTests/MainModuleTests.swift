@@ -9,7 +9,7 @@
 import XCTest
 @testable import SBVIPERWithoutExtLib
 class MainModuleTests: XCTestCase {
-    var mainView: MainTabBarViewController? = nil
+    var mainView: MainTabBarViewController?
     override func setUp() {
          mainView = MainTabBarRouter.createModule() as? MainTabBarViewController
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,7 +20,7 @@ class MainModuleTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testLinks() {
         XCTAssertNotNil(mainView)
         XCTAssertNotNil(mainView!.presenter)
         XCTAssertNotNil(mainView!.presenter!.interactor)

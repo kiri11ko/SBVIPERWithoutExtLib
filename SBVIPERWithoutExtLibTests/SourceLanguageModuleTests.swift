@@ -10,15 +10,16 @@ import XCTest
 @testable import SBVIPERWithoutExtLib
 
 class SourceLanguageModuleTests: XCTestCase {
-    var sourceLanguageView: SourceLanguageViewController? = nil
+    var sourceLanguageView: SourceLanguageViewController?
     override func setUp() {
         sourceLanguageView = SourceLanguageRouter.createModule() as? SourceLanguageViewController
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     override func tearDown() {
+        sourceLanguageView = nil
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    func testLinks() {     
+    func testLinks() {
         XCTAssertNotNil(sourceLanguageView)
         XCTAssertNotNil(sourceLanguageView!.presenter)
         XCTAssertNotNil(sourceLanguageView!.presenter!.interactor)

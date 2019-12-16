@@ -9,7 +9,7 @@
 import XCTest
 @testable import SBVIPERWithoutExtLib
 class TranslateModuleTest: XCTestCase {
-    var translateView: TranslateViewController? = nil
+    var translateView: TranslateViewController?
     override func setUp() {
         translateView = TranslateRouter.createModule() as? TranslateViewController
     }

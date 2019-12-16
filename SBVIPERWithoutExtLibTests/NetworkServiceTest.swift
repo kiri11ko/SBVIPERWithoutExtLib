@@ -18,6 +18,8 @@ class NetworkServiceTest: XCTestCase {
     }
 
     override func tearDown() {
+        network = nil
+        yandexEndpoint = nil
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
