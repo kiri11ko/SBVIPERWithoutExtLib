@@ -33,8 +33,9 @@ extension YandexLanguageEndpoint: IEndpoint {
     var queryItems: [URLQueryItem]? {
         switch self {
         case .yandex(let model):
+            let key = "trnsl.1.1.20191119T111752Z.69ccba57e0a873b8.9a635ffad66da2441a1cd4b03f1753a9eef83c46"
             var queryItems: [URLQueryItem] = [URLQueryItem(name: "key",
-                                                           value: "trnsl.1.1.20191119T111752Z.69ccba57e0a873b8.9a635ffad66da2441a1cd4b03f1753a9eef83c46"),
+                                                           value: key),
                                               URLQueryItem(name: "lang", value: "en-ru"),
                                               URLQueryItem(name: "format", value: "plain")]
             model.forEach {

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 class JSONService: JSONManager {
     func decode<T: Decodable>(type: T.Type, data: Data) -> (T?, Error?) {
         var responseModel: T?

@@ -8,7 +8,6 @@
 import Foundation
 
 class NetworkService: NetworkManager {
-
     func request<T: IEndpoint>(endpoint: T, completion: @escaping (Data?, Error?) -> Void) {
         var urlConstructor = URLComponents()
         urlConstructor.host = endpoint.host
@@ -18,7 +17,6 @@ class NetworkService: NetworkManager {
         let task = createDataTask(from: urlConstructor, completion: completion)
         task!.resume()
     }
-
     private func createDataTask(from urlConstructor: URLComponents,
                                 completion: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask? {
         guard let url = urlConstructor.url else { return nil }
