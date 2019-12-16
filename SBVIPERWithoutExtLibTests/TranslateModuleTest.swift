@@ -22,6 +22,7 @@ class TranslateModuleTest: XCTestCase {
         XCTAssertNotNil(translateView!.presenter!.interactor)
         XCTAssertNotNil(translateView!.presenter!.interactor!.coredata)
         XCTAssertNotNil(translateView!.presenter!.interactor!.network)
+        XCTAssertNotNil(translateView!.presenter!.interactor!.json)
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

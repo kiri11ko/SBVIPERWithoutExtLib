@@ -27,6 +27,7 @@ protocol TranslateInteractorProtocol: class {
   var presenter: TranslatePresenterProtocol? { get set }
     var coredata: DataManager! {get set}
     var network: NetworkManager! { get set}
+    var json: JSONManager! {get set}
     func getTranslateData(endpoint: YandexLanguageEndpoint)
 }
 

@@ -16,6 +16,7 @@ class HistoryModuleTest: XCTestCase {
     }
 
     override func tearDown() {
+        historyView = nil
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 

@@ -19,10 +19,12 @@ class TranslateRouter: TranslateWireframeProtocol {
         let presenter = TranslatePresenter(interface: view, interactor: interactor, router: router)
         let coreData = CoreDataService()
         let network = NetworkService()
+        let json = JSONService()
         view.presenter = presenter
         interactor.presenter = presenter
         interactor.coredata = coreData
         interactor.network = network
+        interactor.json = json
         router.viewController = view
 
         return view

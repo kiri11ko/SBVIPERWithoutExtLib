@@ -28,8 +28,8 @@ class NetworkServiceTest: XCTestCase {
         let expect = expectation(description: "network request")
         //when
         network.request(endpoint: yandexEndpoint) { (data, error) in
-            if  error != nil {
-                XCTFail("Network error: \(error!.localizedDescription)")
+            if let error = error {
+                XCTFail("Network error: \(error.localizedDescription)")
             }
             if data == nil {
                  XCTFail("Network error: nil data")

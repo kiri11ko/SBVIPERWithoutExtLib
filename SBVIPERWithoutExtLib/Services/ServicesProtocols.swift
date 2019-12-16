@@ -24,3 +24,8 @@ protocol IEndpoint {
 protocol NetworkManager: class {
     func request<T: IEndpoint>(endpoint: T, completion: @escaping (Data?, Error?) -> Void)
 }
+
+protocol JSONManager: class {
+    func decode<T: Decodable>(type: T.Type, data: Data) -> (T?, Error?)
+    func coder<T: Encodable>(type: T.Type, data: T) -> (Data?, Error?)
+}

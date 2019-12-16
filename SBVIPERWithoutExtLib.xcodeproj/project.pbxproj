@@ -53,6 +53,7 @@
 		1FD1ACF823A7AB810011B1FF /* TranslateModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1ACF723A7AB810011B1FF /* TranslateModuleTest.swift */; };
 		1FD1ACFA23A7AC7C0011B1FF /* HistoryModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1ACF923A7AC7C0011B1FF /* HistoryModuleTest.swift */; };
 		1FD1ACFC23A7AD250011B1FF /* MainModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1ACFB23A7AD250011B1FF /* MainModuleTests.swift */; };
+		1FD1ACFE23A7B7780011B1FF /* JSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1ACFD23A7B7780011B1FF /* JSONService.swift */; };
 		1FF51893239D487500E661BA /* Language+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF51891239D487500E661BA /* Language+CoreDataClass.swift */; };
 		1FF51894239D487500E661BA /* Language+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF51892239D487500E661BA /* Language+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,7 @@
 		1FD1ACF723A7AB810011B1FF /* TranslateModuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateModuleTest.swift; sourceTree = "<group>"; };
 		1FD1ACF923A7AC7C0011B1FF /* HistoryModuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModuleTest.swift; sourceTree = "<group>"; };
 		1FD1ACFB23A7AD250011B1FF /* MainModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleTests.swift; sourceTree = "<group>"; };
+		1FD1ACFD23A7B7780011B1FF /* JSONService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONService.swift; sourceTree = "<group>"; };
 		1FF51891239D487500E661BA /* Language+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1FF51892239D487500E661BA /* Language+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +179,7 @@
 			children = (
 				1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */,
 				1F2ECBCB2399095E002FD5BC /* CoreDataService.swift */,
+				1FD1ACFD23A7B7780011B1FF /* JSONService.swift */,
 				1F2ECBCC2399095E002FD5BC /* NetworkService.swift */,
 				1F2ECBCD2399095E002FD5BC /* YandexLanguageEndpoint.swift */,
 			);
@@ -432,6 +435,7 @@
 				1F2ECC1223990A20002FD5BC /* Translate+CoreDataClass.swift in Sources */,
 				1FF51893239D487500E661BA /* Language+CoreDataClass.swift in Sources */,
 				1F2ECBB22399090B002FD5BC /* AppDelegate.swift in Sources */,
+				1FD1ACFE23A7B7780011B1FF /* JSONService.swift in Sources */,
 				1F2ECC1023990A20002FD5BC /* Translate+CoreDataProperties.swift in Sources */,
 				1F2ECBB42399090B002FD5BC /* SceneDelegate.swift in Sources */,
 				1F2ECBCF2399095E002FD5BC /* CoreDataService.swift in Sources */,
