@@ -16,7 +16,7 @@ extension Language {
         return NSFetchRequest<Language>(entityName: "Language")
     }
 
-    @NSManaged public var from: String?
-    @NSManaged public var to: String?
+    @NSManaged public var languageFrom: String?
+    @NSManaged public var languageto: String?
 
 }

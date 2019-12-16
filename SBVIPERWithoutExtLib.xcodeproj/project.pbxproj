@@ -48,8 +48,11 @@
 		1F2ECC1723990A80002FD5BC /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1523990A80002FD5BC /* AppRoute.swift */; };
 		1F2ECC1823990A80002FD5BC /* GeneralRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1623990A80002FD5BC /* GeneralRoute.swift */; };
 		1F2ECC1B23997CF9002FD5BC /* ServicesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */; };
-		1F96849623A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96849523A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.swift */; };
+		1F96849623A4F2A600DE4F6F /* SourceLanguageModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96849523A4F2A600DE4F6F /* SourceLanguageModuleTests.swift */; };
 		1F96849E23A50DC800DE4F6F /* NetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96849D23A50DC800DE4F6F /* NetworkServiceTest.swift */; };
+		1FD1ACF823A7AB810011B1FF /* TranslateModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1ACF723A7AB810011B1FF /* TranslateModuleTest.swift */; };
+		1FD1ACFA23A7AC7C0011B1FF /* HistoryModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1ACF923A7AC7C0011B1FF /* HistoryModuleTest.swift */; };
+		1FD1ACFC23A7AD250011B1FF /* MainModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1ACFB23A7AD250011B1FF /* MainModuleTests.swift */; };
 		1FF51893239D487500E661BA /* Language+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF51891239D487500E661BA /* Language+CoreDataClass.swift */; };
 		1FF51894239D487500E661BA /* Language+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF51892239D487500E661BA /* Language+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -109,9 +112,12 @@
 		1F2ECC1623990A80002FD5BC /* GeneralRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRoute.swift; sourceTree = "<group>"; };
 		1F2ECC1A23997CF9002FD5BC /* ServicesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProtocols.swift; sourceTree = "<group>"; };
 		1F96849323A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBVIPERWithoutExtLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F96849523A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBVIPERWithoutExtLibTests.swift; sourceTree = "<group>"; };
+		1F96849523A4F2A600DE4F6F /* SourceLanguageModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLanguageModuleTests.swift; sourceTree = "<group>"; };
 		1F96849723A4F2A600DE4F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F96849D23A50DC800DE4F6F /* NetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTest.swift; sourceTree = "<group>"; };
+		1FD1ACF723A7AB810011B1FF /* TranslateModuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateModuleTest.swift; sourceTree = "<group>"; };
+		1FD1ACF923A7AC7C0011B1FF /* HistoryModuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModuleTest.swift; sourceTree = "<group>"; };
+		1FD1ACFB23A7AD250011B1FF /* MainModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleTests.swift; sourceTree = "<group>"; };
 		1FF51891239D487500E661BA /* Language+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1FF51892239D487500E661BA /* Language+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -270,7 +276,10 @@
 			isa = PBXGroup;
 			children = (
 				1F96849D23A50DC800DE4F6F /* NetworkServiceTest.swift */,
-				1F96849523A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.swift */,
+				1F96849523A4F2A600DE4F6F /* SourceLanguageModuleTests.swift */,
+				1FD1ACF723A7AB810011B1FF /* TranslateModuleTest.swift */,
+				1FD1ACF923A7AC7C0011B1FF /* HistoryModuleTest.swift */,
+				1FD1ACFB23A7AD250011B1FF /* MainModuleTests.swift */,
 				1F96849723A4F2A600DE4F6F /* Info.plist */,
 			);
 			path = SBVIPERWithoutExtLibTests;
@@ -454,8 +463,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD1ACF823A7AB810011B1FF /* TranslateModuleTest.swift in Sources */,
 				1F96849E23A50DC800DE4F6F /* NetworkServiceTest.swift in Sources */,
-				1F96849623A4F2A600DE4F6F /* SBVIPERWithoutExtLibTests.swift in Sources */,
+				1FD1ACFA23A7AC7C0011B1FF /* HistoryModuleTest.swift in Sources */,
+				1FD1ACFC23A7AD250011B1FF /* MainModuleTests.swift in Sources */,
+				1F96849623A4F2A600DE4F6F /* SourceLanguageModuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
